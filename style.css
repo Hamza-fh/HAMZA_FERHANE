@@ -96,8 +96,14 @@ input , textarea {
 @media (max-width:320px){
     
     .sec1 {
-        width: 90%;
+        width: 80%;
         margin: auto;
+    }
+    .sec1 p {
+        font-size: 16px;
+    }
+    .sec1 p span {
+        font-size:23px;
     }
 }
 @media (max-width:380px){
