@@ -114,6 +114,16 @@ input , textarea {
     header a {
         font-size: 18px;
     }
+    .sec1 {
+        width: 80%;
+        margin: auto;
+    }
+    .sec1 p {
+        font-size: 16px;
+    }
+    .sec1 p span {
+        font-size:23px;
+    }
     .sec2 {
         padding: 20px 0 30px 0 ;
     }
