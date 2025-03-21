@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hamza Ferhane">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="fav.jpeg" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Hamza Ferhane</title>
+</head>
+
+<body>
+    <header class="header">
+
+        <a href="#hero" class="logo">Hamza <span>Fh</span></a>
+        <div class="sidebar">
+            <i onclick=hideSidebar()  id="menu-close" class='bx bx-chevrons-right'></i>
+            <a href="#hero" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="navlinks">
+            <a href="#hero" class="active hidd">Home</a>
+            <a href="#about" class="hidd">About</a>
+            <a href="#contact" class="hidd">Contact</a>
+            <i onclick=showSidebar() id="menu-open" class='bx bx-menu-alt-right'></i>
+        </div>
+
+
+
+    </header>
+    <section id="hero" class="hero">
+        <div class="sec-1">
+            <div class="bio">
+                <p>Hi I'm</p>
+                <h1>Hamza <span class="last-name">Ferhane</span></h1>
+                <p class="tp-text">Frontend Developer</p>
+
+            </div>
+            <div class="btn-hero">
+                <a href="#contact"> Contact</a>
+                <a href="#">Get CV</a>
+            </div>
+            <div class="social-media">
+                <a href="https://www.instagram.com/h_.__hamza?igsh=MTVjaWN5YjAwd3RwNA=="><i
+                        class='bx bxl-instagram'></i></a>
+                <a href="https://wa.link/g0cgbb"><i class='bx bxl-whatsapp'></i></a>
+                <a href="tel:+212712997189"><i class='bx bx-phone'></i></a>
+                <a href="https://github.com/Hamza-fh"><i class='bx bxl-github'></i></a>
+                <a href="mailto:ferhanehamza9@gmail.com"><i class='bx bx-envelope'></i></a>
+
+            </div>
+        </div>
+        <div class="sec-2">
+            <img src="anime.jpeg" alt="profile">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-1">
+            <h2 class="about-title">About</h2>
+        </div>
+        <div class="about-2">
+            <div class="about-img">
+                <img src="undraw_coding_joxb.svg" class="img-about" alt="profile-about">
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p> Hi everyone my full name's <span>Hamza Ferhane</span>, a 23 years old Moroccan, is a passionate
+                    <span>web developer</span>. He is always striving to improve
+                    his skills and turn ideas into outstanding digital projects. Ambitious and hardworking, he is
+                    determined to achieve success in his field.
+                </p>
+            </div>
+        </div>
+
+    </section>
+    <section class="contact" id="contact">
+        <div class="contact-1">
+            <h2 class="contact-title">Contact</h2>
+        </div>
+        <div class="contact-2">
+            <form action="https://formsubmit.co/ferhanehamza9@gmail.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" id="" placeholder="Email" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="tel" name="name" placeholder="Phone Number" required>
+                        <input type="text" name="subject" id="" placeholder="Subject" required>
+                    </div>
+                </div>
+                <div class="input-group-2">
+                    <textarea name="message" id="" cols="30" rows="8" placeholder="Your Message.." required></textarea>
+                    <input type="submit" value="Send" name="Send" class="btn">
+
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <footer class="footer" id="footer">
+        <div class="social-media1">
+            <a href="https://www.instagram.com/h_.__hamza?igsh=MTVjaWN5YjAwd3RwNA=="><i
+                    class='bx bxl-instagram'></i></a>
+            <a href="https://wa.link/g0cgbb"><i class='bx bxl-whatsapp'></i></a>
+            <a href="tel:+212712997189"><i class='bx bx-phone'></i></a>
+            <a href="https://github.com/Hamza-fh"><i class='bx bxl-github'></i></a>
+            <a href="mailto:ferhanehamza9@gmail.com"><i class='bx bx-envelope'></i></a>
+
+        </div>
+        <div class="pages">
+            <a href="#hero" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <small class="copy"> &copy; Hamza Ferhane | All Right Reserved</small>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

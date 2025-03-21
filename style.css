@@ -1,0 +1,811 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "poppins";
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: black;
+  color: white;
+}
+/* ******************************** HEADER  SEC ******************************** */
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+header .logo {
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+.logo span {
+  color: orangered;
+  font-weight: 600;
+  text-shadow: 0 0 25px orangered;
+}
+.navlinks {
+  display: flex;
+  gap: 35px;
+  padding: 10px 40px;
+}
+.navlinks a {
+  color: white;
+  font-size: 17px;
+  font-weight: 400;
+  transition: 0, 3s ease;
+  border-bottom: 3px solid transparent;
+}
+.navlinks a:hover,
+.navlinks a.active {
+  border-bottom: 3px solid orangered;
+}
+#menu-open{
+  display: none;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 50vh;
+  width: 70%;
+  border-bottom-left-radius: 15px;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  background-color: orangered;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.3);
+  display: none;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar a {
+  color:white;
+  font-weight: 800;
+  display: flex;
+}
+/* ******************************** HERO SEC ******************************** */
+.hero {
+  padding: 200px 6rem 100px 6rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.sec-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.sec-1 .bio {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.bio p {
+  font-size: 20px;
+}
+.sec-1 .bio h1 {
+  font-size: 30px;
+  text-shadow: 0 0 25px orangered;
+}
+.sec-1 .bio .last-name {
+  color: orangered;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.bio .tp-text {
+  font-size: 2rem;
+  color: orangered;
+  text-shadow: 0 0 25px orangered;
+  font-weight: bold;
+}
+
+.sec-2 img {
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 50px red;
+  animation: image 2.5s infinite;
+  transition: 0.6s ease;
+}
+@keyframes image {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 0 40px red;
+  }
+  50% {
+    transform: translateY(-7px);
+    box-shadow: 0 0 60px red;
+  }
+
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 0 50px red;
+  }
+}
+
+.btn-hero a {
+  padding: 10px 14px;
+  margin-left: 17px;
+  color: white;
+  border-radius: 20px;
+  background-color: orangered;
+  transition: 0.7s ease;
+  margin-bottom: 10px;
+}
+.btn-hero a:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  text-shadow: 0 0 25px white;
+}
+.social-media a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: 1px solid white;
+  font-size: 20px;
+  border-radius: 50%;
+  margin: 17px 5px;
+  transition: 0.3s ease;
+  color: white;
+}
+.social-media a:hover {
+  color: black;
+  border: none;
+  transform: scale(1.3) translateY(-4px);
+  background-color: orangered;
+  box-shadow: 0 0 25px orangered;
+}
+/* ******************************** ABOUT SEC******************************** */
+.about {
+  padding: 80px 0;
+}
+.about-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-title {
+  font-size: 30px;
+  border-bottom: 3px solid orangered;
+  letter-spacing: 3px;
+}
+.about-2 {
+  margin-top: 50px;
+  padding: 20px 150px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+.about-2 img {
+  width: 400px;
+}
+.about-2 .about-text h2 {
+  color: #ff4500;
+  margin-bottom: 10px;
+  text-align: center;
+
+}
+.about-2 .about-text p {
+  font-size: 17px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.about-2 .about-text span {
+  color: orange;
+  font-style: italic;
+}
+/* ******************************** CONTACT SEC  ******************************** */
+.contact {
+  padding: 80px 0;
+}
+.contact-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-title {
+  font-size: 30px;
+  border-bottom: 3px solid orangered;
+  letter-spacing: 3px;
+}
+.contact form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  margin: 40px auto;
+  text-align: center;
+}
+.contact form .input-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 16 px;
+  color: white;
+  background-color: black;
+  border-radius: 15px;
+  border: 2px solid white;
+  margin: 6px 0;
+  resize: none;
+}
+.contact .input-group-2 input {
+  padding: 10px 30px;
+  color: white;
+  border-radius: 20px;
+  background-color: orangered;
+  transition: 0.7s ease;
+  border: none;
+  box-shadow: 0 0 25px orangered;
+}
+::placeholder {
+  color: grey;
+}
+
+/* ******************************** FOOTER SEC  ******************************** */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 0 30px 0;
+  gap: 10px;
+  background-color: rgba(251, 62, 45, 0.3);
+}
+footer .social-media1 a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: 1px solid white;
+  font-size: 20px;
+  border-radius: 50%;
+  margin: 17px 5px;
+  transition: 0.3s ease;
+  color: white;
+}
+.social-media1 a:hover {
+  color: black;
+  border: none;
+  transform: scale(1.3) translateY(-4px);
+  background-color: #ff4500;
+  box-shadow: 0 0 25px orangered;
+}
+footer .pages {
+  display: flex;
+  gap: 20px;
+}
+footer .pages a {
+  color: white;
+  transition: 0, 8s ease;
+}
+.pages a:hover {
+  color: orangered;
+  transform: scale(1.1);
+}
+footer small {
+  color: grey;
+}
+
+@media (max-width: 320px) {
+  #menu-open   {
+    display: block;
+    font-size: 35px;
+    margin-right: -30px;
+  }
+  .bx-chevrons-right{
+    display: block;
+    font-size: 30px;
+    color: black;
+
+  }
+  .hidd {
+    display: none;
+  }
+
+  header .logo {
+    font-size: 25px;
+    padding: 15px 20px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 110px 20px 80px 20px;
+    gap: 10px;
+  }
+  .hero .sec-2 img {
+    width: 200px;
+  }
+  .sec-1 {
+    gap: 1rem;
+    text-align: center;
+  }
+  .sec-1 .bio {
+    gap: 2px;
+  }
+  .bio p {
+    font-size: 17px;
+  }
+  .sec-1 .bio h1 {
+    font-size: 24px;
+  }
+  .sec-1 .bio .last-name {
+    font-size: 25px;
+  }
+
+  .bio .tp-text {
+    font-size: 25px;
+  }
+
+  .btn-hero a {
+    padding: 9px 13px;
+    margin-left: 11px;
+  }
+  .social-media a {
+    width: 2rem;
+    height: 2rem;
+    font-size: 20px;
+    margin: 10px 5px;
+  }
+  .about {
+    padding: 5px 0;
+  }
+  .about-title {
+    font-size: 26px;
+    border-bottom: 3px solid orangered;
+    letter-spacing: 2px;
+  }
+  .about-2 {
+    margin-top: 20px;
+    padding: 20px 34px;
+    gap: 40px;
+    text-align: center;
+  }
+  .about-2 .about-text p {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  .about .about-2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-2 .about-img img {
+    width: 170px;
+  }
+  .contact {
+    padding: 8px 0;
+  }
+  .contact-title {
+    font-size: 26px;
+    letter-spacing: 2px;
+  }
+  .contact form {
+    gap: 10px;
+    margin: 30px auto;
+    flex-direction: column;
+    padding: 0 30px;
+  }
+  .contact form .input-box input,
+  .contact form textarea {
+    padding: 15px 10px;
+    font-size: 14px;
+    margin: 6px 0;
+  }
+  footer {
+    padding: 10px 0 20px 0;
+    gap: 7px;
+  }
+  footer .social-media1 a {
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 17px;
+    margin: 10px 4px;
+  }
+  footer .pages {
+    display: flex;
+    font-size: 14px;
+    gap: 10px;
+  }
+  footer small {
+    color: grey;
+  }
+}
+@media (max-width: 375px) {
+  #menu-open   {
+    display: block;
+    font-size: 35px;
+    margin-right: -30px;
+  }
+  .bx-chevrons-right{
+    display: block;
+    font-size: 30px;
+    color: black;
+
+  }
+  .hidd {
+    display: none;
+  }
+
+  header .logo {
+    font-size: 25px;
+    padding: 15px 20px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 110px 20px 80px 20px;
+    gap: 10px;
+  }
+  .hero .sec-2 img {
+    width: 200px;
+  }
+  .sec-1 {
+    gap: 1rem;
+    text-align: center;
+  }
+  .sec-1 .bio {
+    gap: 2px;
+  }
+  .bio p {
+    font-size: 17px;
+  }
+  .sec-1 .bio h1 {
+    font-size: 24px;
+  }
+  .sec-1 .bio .last-name {
+    font-size: 25px;
+  }
+
+  .bio .tp-text {
+    font-size: 25px;
+  }
+
+  .btn-hero a {
+    padding: 9px 13px;
+    margin-left: 11px;
+  }
+  .social-media a {
+    width: 2rem;
+    height: 2rem;
+    font-size: 20px;
+    margin: 10px 5px;
+  }
+  .about {
+    padding: 5px 0;
+  }
+  .about-title {
+    font-size: 26px;
+    border-bottom: 3px solid orangered;
+    letter-spacing: 2px;
+  }
+  .about-2 {
+    margin-top: 20px;
+    padding: 20px 34px;
+    gap: 40px;
+    text-align: center;
+  }
+  .about-2 .about-text p {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  .about .about-2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-2 .about-img img {
+    width: 170px;
+  }
+  .contact {
+    padding: 8px 0;
+  }
+  .contact-title {
+    font-size: 26px;
+    letter-spacing: 2px;
+  }
+  .contact form {
+    gap: 10px;
+    margin: 30px auto;
+    flex-direction: column;
+    padding: 0 30px;
+  }
+  .contact form .input-box input,
+  .contact form textarea {
+    padding: 15px 10px;
+    font-size: 14px;
+    margin: 6px 0;
+  }
+  footer {
+    padding: 10px 0 20px 0;
+    gap: 7px;
+  }
+  footer .social-media1 a {
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 17px;
+    margin: 10px 4px;
+  }
+  footer .pages {
+    display: flex;
+    font-size: 14px;
+    gap: 10px;
+  }
+  footer small {
+    color: grey;
+  }
+}
+@media (max-width: 486px) {
+  #menu-open   {
+    display: block;
+    font-size: 35px;
+    margin-right: -30px;
+  }
+  .bx-chevrons-right{
+    display: block;
+    font-size: 30px;
+    color: black;
+
+  }
+  .hidd {
+    display: none;
+  }
+
+  header .logo {
+    font-size: 25px;
+    padding: 15px 20px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 110px 20px 80px 20px;
+    gap: 10px;
+  }
+  .hero .sec-2 img {
+    width: 200px;
+  }
+  .sec-1 {
+    gap: 1rem;
+    text-align: center;
+  }
+  .sec-1 .bio {
+    gap: 2px;
+  }
+  .bio p {
+    font-size: 17px;
+  }
+  .sec-1 .bio h1 {
+    font-size: 24px;
+  }
+  .sec-1 .bio .last-name {
+    font-size: 25px;
+  }
+
+  .bio .tp-text {
+    font-size: 25px;
+  }
+
+  .btn-hero a {
+    padding: 9px 13px;
+    margin-left: 11px;
+  }
+  .social-media a {
+    width: 2rem;
+    height: 2rem;
+    font-size: 20px;
+    margin: 10px 5px;
+  }
+  .about {
+    padding: 5px 0;
+  }
+  .about-title {
+    font-size: 26px;
+    border-bottom: 3px solid orangered;
+    letter-spacing: 2px;
+  }
+  .about-2 {
+    margin-top: 20px;
+    padding: 20px 34px;
+    gap: 40px;
+    text-align: center;
+  }
+  .about-2 .about-text p {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  .about .about-2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-2 .about-img img {
+    width: 170px;
+  }
+  .contact {
+    padding: 8px 0;
+  }
+  .contact-title {
+    font-size: 26px;
+    letter-spacing: 2px;
+  }
+  .contact form {
+    gap: 10px;
+    margin: 30px auto;
+    flex-direction: column;
+    padding: 0 30px;
+  }
+  .contact form .input-box input,
+  .contact form textarea {
+    padding: 15px 10px;
+    font-size: 14px;
+    margin: 6px 0;
+  }
+  footer {
+    padding: 10px 0 20px 0;
+    gap: 7px;
+  }
+  footer .social-media1 a {
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 17px;
+    margin: 10px 4px;
+  }
+  footer .pages {
+    display: flex;
+    font-size: 14px;
+    gap: 10px;
+  }
+  footer small {
+    color: grey;
+  }
+}
+@media (max-width: 850px) {
+ 
+
+  header .logo {
+    font-size: 25px;
+    padding: 15px 20px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 110px 20px 80px 20px;
+    gap: 10px;
+  }
+  .hero .sec-2 img {
+    width: 200px;
+  }
+  .sec-1 {
+    gap: 1rem;
+    text-align: center;
+  }
+  .sec-1 .bio {
+    gap: 2px;
+  }
+  .bio p {
+    font-size: 17px;
+  }
+  .sec-1 .bio h1 {
+    font-size: 24px;
+  }
+  .sec-1 .bio .last-name {
+    font-size: 25px;
+  }
+
+  .bio .tp-text {
+    font-size: 25px;
+  }
+
+  .btn-hero a {
+    padding: 9px 13px;
+    margin-left: 11px;
+  }
+  .social-media a {
+    width: 2rem;
+    height: 2rem;
+    font-size: 20px;
+    margin: 10px 5px;
+  }
+  .about {
+    padding: 5px 0;
+  }
+  .about-title {
+    font-size: 26px;
+    border-bottom: 3px solid orangered;
+    letter-spacing: 2px;
+  }
+  .about-2 {
+    margin-top: 20px;
+    padding: 20px 34px;
+    gap: 40px;
+    text-align: center;
+  }
+  .about-2 .about-text p {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  .about .about-2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-2 .about-img img {
+    width: 170px;
+  }
+  .contact {
+    padding: 8px 0;
+  }
+  .contact-title {
+    font-size: 26px;
+    letter-spacing: 2px;
+  }
+  .contact form {
+    gap: 10px;
+    margin: 30px auto;
+    flex-direction: column;
+    padding: 0 30px;
+  }
+  .contact form .input-box input,
+  .contact form textarea {
+    padding: 15px 10px;
+    font-size: 14px;
+    margin: 6px 0;
+  }
+  footer {
+    padding: 10px 0 20px 0;
+    gap: 7px;
+  }
+  footer .social-media1 a {
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 17px;
+    margin: 10px 4px;
+  }
+  footer .pages {
+    display: flex;
+    font-size: 14px;
+    gap: 10px;
+  }
+  footer small {
+    color: grey;
+  }
+}
+@media (max-width:1024px) {
+  .about {
+    padding: 10px 5px;
+    gap: 10px;
+  }
+  .about-img img {
+    width: 250px;
+  }
+  
+}
